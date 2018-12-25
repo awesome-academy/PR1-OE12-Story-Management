@@ -1,7 +1,19 @@
 <% provide :title, @story.name %>
-<%= @story.name %>
-<br>
-<%= @story.describe %>
-<br>
-<%= @story.image %>
-<br>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="member_info">
+      <h1 id = "kind">
+        Thể loại: <%= @story.name %> <br>
+      </h1>
+      <h4 id = "des"><%= @story.describe %> <br> </h4>
+      <p id = "author">Tác giả:<%= @story.author_name %></p>
+    </section>
+    <div>
+      <%= render @comments %>
+    </div>
+    <div>
+      <%= render partial: "comments/new", locals:{story: @story} %>
+    </div>
+  </div>
+  </aside>
+</div>

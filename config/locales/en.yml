@@ -1,7 +1,14 @@
 en:
   layouts:
     header:
-      web: "Web Truyen Online"
+      truyencuoi: "Truyện Cười"
+      truyenteen: "Truyện Teen"
+      truyenngungon: "Truyện Ngụ Ngôn"
+      truyenngan: "Truyện Ngắn"
+      truyenngontinh: "Truyện Ngôn Tình"
+      truyenlove: "Những truyện được yêu thích nhất"
+      truyennew: "Những bài viết mới"
+      web: "WEB TRUYỆN ONLINE"
       home: "Home"
       help: "Help"
       login: "Log in"
@@ -13,20 +20,12 @@ en:
       account: "Account"
       post: "Post Story"
       story: "Stories"
+      search: "Search..."
     footer:
       about: "About"
       contact: "Contact"
   static_pages:
     home:
-      truyencuoi: "Truyện Cười"
-      truyenteen: "Truyện Teen"
-      truyenngungon: "Truyện Ngụ Ngôn"
-      truyenngan: "Truyện Ngắn"
-      truyenngontinh: "Truyện Ngôn Tình"
-      search: "Search..."
-      truyenlove: "Những truyện được yêu thích nhất"
-      truyennew: "Những bài viết mới"
-      home: "Home"
     help:
       please: "Please access:"
       help: "for help"
@@ -40,32 +39,15 @@ en:
       email: "Email:tuananh@gmail.com"
       contact1: "Contact"
   stories:
-    story:
-      delete: "delete"
-      you_sure: "You sure?"
     index:
       all_stories: "All Stories"
     new:
       story: "Stories"
       post_stories: "Post Stories"
-      name: "Name"
-      describe: "Describe"
-      author: "Author"
-      blank: ": can't be blank"
     show:
       notfound: "Not found"
-      chapter_new: "Chapter new"
-      read: "Read the story"
-      comment: "Comments"
-      author: "Author:"
-      story: "Story:"
-      post: "Post the chapter"
-      new_chapter: "New chapter"
     create:
       post: "You have successfully posted the story"
-    destroy:
-      success: "Comment deleted"
-      failed: "Delete failed"
   members:
     new:
       create_account: "Create my account"
@@ -95,11 +77,7 @@ en:
       sign_up: "Sign up"
       new_member: "New member?"
       sign_up: "Sign up now!"
-    create:
-      invalid: "Invalid email/password combination"
   comments:
-    validate:
-      content: "Content can't be blank"
     form_edit:
       edit_comment: "Compose edit comment..."
       edit: "Edit"
@@ -118,45 +96,6 @@ en:
     create:
       success: "Create success"
       failed: "Create failed"
-      please_login: "Please login"
     destroy:
       success: "Comment deleted"
       failed: "Delete failed"
-  chapters:
-    chapter:
-      delete: "delete"
-      you_sure: "You sure"
-      ago: "ago"
-    new:
-      post: "Post"
-      content: "Content chapter"
-    create:
-      success: "Create success"
-      failed: "Create failed"
-      please_login: "Please login"
-    destroy:
-      success: "Comment deleted"
-      failed: "Delete failed"
-      notfound: "Not found"
-  authors:
-    new:
-      new_author: "New author"
-      add_author: "Add author"
-      name: "Name"
-      blank: ": can't be blank"
-    author:
-      you_sure: "You sure"
-    index:
-      all_author: "All author"
-    show:
-      author: "Author: "
-    create:
-      add: "You have successfully added the author"
-      failed: "create failed"
-    destroy:
-      success: "Author deleted"
-      failed: "Delete failed"
-      notfound: "Not found"
-    error:
-      error: "error"
-      the_form: "The form"

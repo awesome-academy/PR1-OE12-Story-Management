@@ -1,6 +1,30 @@
-<% provide :title, t(".contact1") %>
+<% provide :title, t(".contact") %>
 <div id = "contact">
-  <p> <%= t ".web" %> </p>
-  <p> <%= t ".contact" %> </p>
-  <p> <%= t ".email" %> </p>
+<div class="center jumbotron">
+  <h1><%= t ".web" %></h1>
+  <h2><%= t ".contact"%></h2>
+  <h2><%= t ".email" %></h2>
 </div>
+
+<div class="clearfix"> </div>
+    <div class="contact-left1">
+      <h3>Contact Us With <span>Any questions</span></h3>
+      <div class="in-left">
+        <form>
+          <p class="your-para">Your Name :</p>
+              <input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+              <p class="your-para">Your Mail :</p>
+              <input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+              <p class="your-para">Phone Number:</p>
+              <input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+
+        </form>
+      </div>
+      <div class="in-right">
+        <form>
+          <textarea cols="77" rows="6" onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="clearfix"> </div>
+    </div>

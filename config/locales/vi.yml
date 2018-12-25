@@ -1,25 +1,25 @@
 vi:
   layouts:
     header:
-      web: "Web Truyện Online"
-      home: "Trang chủ"
-      help: "Trợ giúp"
-      login: "Đăng nhập"
-    footer:
-      about: "About"
-      contact: "Liên Hệ"
-  static_pages:
-    home:
       truyencuoi: "Truyện Cười"
       truyenteen: "Truyện Teen"
       truyenngungon: "Truyện Ngụ Ngôn"
       truyenngan: "Truyện Ngắn"
       truyenngontinh: "Truyện Ngôn Tình"
-      search: "Tìm Kiếm..."
       english: "Tiếng Anh"
       vietnam: "Tiếng Việt"
       truyenlove: "Những truyện được yêu thích nhất"
       truyennew: "Những bài viết mới"
+      web: "WEB TRUYỆN ONLINE"
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      login: "Đăng nhập"
+      search: "Tìm Kiếm..."
+    footer:
+      about: "About"
+      contact: "Liên Hệ"
+  static_pages:
+    home:
     help:
       please: "Vui lòng truy cập:"
       help: "Để được trợ giúp"

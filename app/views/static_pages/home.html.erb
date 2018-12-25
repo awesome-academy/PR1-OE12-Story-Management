@@ -1,42 +1,79 @@
-<% provide :title, t(".home") %>
-<nav class = "group">
-  <ul class="nav navbar-nav navbar-right">
-    <li>
-      <%= link_to t(".truyencuoi"), load_story_path(type: "Truyen Cuoi"),
-        remote: true %>
-    </li>
-    <li>
-      <%= link_to t(".truyenteen"), load_story_path(type: "Truyen Teen"),
-        remote: true %>
-    </li>
-    <li>
-      <%= link_to t(".truyenngungon"), load_story_path(type: "Truyen Ngu Ngon"),
-        remote: true %>
-    </li>
-    <li>
-      <%= link_to t(".truyenngan"), load_story_path(type: "Truyen Ngan"),
-        remote: true %>
-    </li>
-    <li>
-      <%= link_to t(".truyenngontinh"), load_story_path(type: "Truyen Ngon Tinh"),
-        remote: true %>
-    </li>
-  </ul>
-  <%= form_for "", url: root_path, role: t(".search"), method: :get do %>
-  <%= text_field_tag :search, @search_term, placeholder: t(".search") %>
-  <% end %>
-</nav>
-<div id = contentleft>
-  <h2 id = "content"> <%= t ".truyenlove" %> </h2>
-  <%= paginate @stories %>
-  <div id="list-story">
-    <%= render "list_truyen", collection: @stories %>
-  </div>
-  <%= paginate @stories %>
-</div>
-<div id = "sidebar">
-  <h2 id = "name"> <%= t ".truyennew" %> </h2>
-  <div>
-    <%= render "list_truyen", collection: @stories %>
-  </div>
-</div>
+<div class="col-md-9 main">
+    <div class="banner-section">
+      <h3 class="tittle" id = "tittle1">Những bài viết nổi bật </h3>
+      <div class="banner">
+        <div  class="callbacks_container">
+          <ul class="rslides" id="slider4">
+
+        </ul>
+      </div>
+          <!--banner-->
+          <script src="javascripts/responsiveslides.min.js"></script>
+       <script>
+          // You can also use "$(window).load(function() {"
+          $(function () {
+            // Slideshow 4
+            $("#slider4").responsiveSlides({
+              auto: true,
+              pager:true,
+              nav:true,
+              speed: 500,
+              namespace: "callbacks",
+              before: function () {
+                $('.events').append("<li>before event fired.</li>");
+              },
+              after: function () {
+                $('.events').append("<li>after event fired.</li>");
+              }
+            });
+          });
+        </script>
+     <div class="clearfix"> </div>
+          <div class="b-bottom">
+
+        </div>
+       </div>
+         <!--//banner-->
+        <!--/top-news-->
+        <div class="top-news">
+        <div class="top-inner">
+          <div class="col-md-6 top-text">
+              <div id="list-story">
+                <%= render "list_truyen", collection: @stories %>
+              </div>
+
+           </div>
+          <div class="col-md-6 top-text two">
+
+           </div>
+           <div class="clearfix"> </div>
+         </div>
+         <div class="top-inner second">
+          <div class="col-md-6 top-text">
+
+           </div>
+          <div class="col-md-6 top-text two">
+
+           </div>
+           <div class="clearfix"> </div>
+         </div>
+              </div>
+          <!--//top-news-->
+         </div>
+      <!--//banner-section-->
+      <div class="banner-right-text">
+       <h3 class="tittle" id = "tittle2">Những bài viết mới</h3>
+      <!--/general-news-->
+       <div class="general-news">
+        <div class="general-inner">
+          <div class="general-text">
+             <div id="list-story">
+               <%= render "list_truyen", collection: @stories %>
+             </div>
+
+           </div>
+
+         </div>
+      </div>
+     </div>
+      <div class="clearfix"> </div>

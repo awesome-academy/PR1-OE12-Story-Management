@@ -1,7 +1,16 @@
 <% collection.each do |story| %>
-  <div>
-    <%= link_to (image_tag story.image.url if story.image?), story %>
-    <%= link_to story.name, story %>
+<div>
+  <div class="top-news">
+        <div class="top-inner">
+          <div class="col-md-6 top-text">
+    <%= link_to image_tag( story.image, alt: t(".logo")), story_path(story) %>
+    </div>
+    <div class="col-md-6 top-text two">
+    <p>  <%= story.describe %> </p>
+     </div>
+     <div class="clearfix"> </div>
+      </div>
+  </div>
     <% if logged_in? %>
       <%= link_to like_unlike_path(id: story),
       id: "like-#{story.id}", class: "btn btn-primary", remote: true do %>
@@ -10,6 +19,7 @@
           <i class="fa fa-thumbs-down"></i>
         <% else %>
           <i class="fa fa-thumbs-up"></i>
+          <%= link_to "Comment", story_path(story),class: "btn-primary" %>
         <% end %>
       <% end %>
     <% end %>

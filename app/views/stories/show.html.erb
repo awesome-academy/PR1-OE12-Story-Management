@@ -1,39 +1,19 @@
 <% provide :title, @story.name %>
-<h1>
-  <%= t ".story" %> <%= @story.name %>
-</h1>
-<div class="image_story">
-  <%= image_tag @story.image.url if @story.image? %>
-</div>
-<div class="describe_story">
-  <%= @story.describe %>
-  <div>
-    <%= t ".author" %> <%= link_to @story.author_name, @story.author %>
-  </div>
-</div>
 <div class="row">
-  <b><%= t ".read" %></b>
-  <hr>
-  <div id="list-chapter">
-    <%= render @chapters %>
+  <aside class="col-md-4">
+    <section class="member_info">
+      <h1 id = "kind">
+        Thể loại: <%= @story.name %> <br>
+      </h1>
+      <h4 id = "des"><%= @story.describe %> <br> </h4>
+      <p id = "author">Tác giả:<%= @story.author_name %></p>
+    </section>
+    <div>
+      <%= render @comments %>
+    </div>
+    <div>
+      <%= render partial: "comments/new", locals:{story: @story} %>
+    </div>
   </div>
-  <%= paginate @chapters %>
-  <div class="new_chapter">
-    <% if current_member.admin? %>
-      <b><%= t ".post" %></b>
-      <%= link_to t(".new_chapter"), new_chapter_path(story_id: @story.id), id: "btn-new-chapter", remote: true %>
-      <div id="chapter-new"></div>
-    <% end %>
-  </div>
-</div>
-<div class="row">
-  <b><%= @comments.size %> <%= t ".comment" %></b>
-  <hr>
-  <div>
-    <%= render "comments/new", story: @story %>
-  </div>
-  <div id="list-comment">
-    <%= render @comments %>
-  </div>
-  <%= paginate @comments %>
+  </aside>
 </div>

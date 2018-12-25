@@ -54,7 +54,7 @@ class MembersController < ApplicationController
     return if logged_in?
     store_location
     flash[:danger] = t ".please_login"
-    redirect_to login_url
+    redirect_to root_url
   end
 
   def correct_member
