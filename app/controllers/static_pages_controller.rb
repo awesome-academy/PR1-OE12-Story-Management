@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
       @seach_term = params[:search]
       @stories = @stories.search_by(@seach_term)
     end
+    @news = Story.limit(Settings.limit).order_by(:desc)
   end
 
   def help; end

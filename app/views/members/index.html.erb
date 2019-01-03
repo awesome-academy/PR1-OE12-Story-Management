@@ -1,7 +1,7 @@
 <% provide :title, t(".all_members") %>
 <h1><%= t ".all_members" %></h1>
-<%= paginate @members %>
+<%= paginate @members, theme: "twitter-bootstrap-3" %>
 <ul class="members">
   <%= render @members %>
 </ul>
-<%= paginate @members %>
+<%= paginate @members, theme: "twitter-bootstrap-3" %>

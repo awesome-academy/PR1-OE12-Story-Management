@@ -19,11 +19,10 @@ class CommentsController < ApplicationController
 
   def update
     if @comment.update comment_params
-      flash[:success] = t ".success"
+      flash.now[:success] = t ".success"
     else
-      flash[:danger] = t ".failed"
+      flash.now[:danger] = t ".failed"
     end
-    redirect_to @comment.story
   end
 
   def destroy

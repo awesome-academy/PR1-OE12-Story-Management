@@ -3,7 +3,7 @@
     <div class="col-md-11 chapter">
       <%= link_to chapter.name, chapter %>
     </div>
-    <% if current_member.admin? %>
+    <% if logged_in? && current_member.admin? %>
       <div class="col-md-1 chapter">
         <%= link_to chapter, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
           <span class="glyphicon glyphicon-trash"></span>

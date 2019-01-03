@@ -17,7 +17,7 @@
   <div id="list-chapter">
     <%= render @chapters %>
   </div>
-  <%= paginate @chapters %>
+  <%= paginate @chapters, theme: "twitter-bootstrap-3" %>
   <% if logged_in? %>
     <div class="new_chapter">
       <% if current_member.admin? %>
@@ -38,5 +38,5 @@
   <div id="list-comment">
     <%= render @comments %>
   </div>
-  <%= paginate @comments %>
+  <%= paginate @comments, theme: "twitter-bootstrap-3" %>
 </div>

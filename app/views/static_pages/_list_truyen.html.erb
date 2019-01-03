@@ -1,6 +1,6 @@
 <% collection.each do |story| %>
-  <div>
-    <%= link_to (image_tag story.image.url if story.image?), story %>
+  <div class="story">
+    <%= link_to (image_tag story.image_show.url if story.image?), story %>
     <%= link_to story.name, story %>
     <% if logged_in? %>
       <%= link_to like_unlike_path(id: story),

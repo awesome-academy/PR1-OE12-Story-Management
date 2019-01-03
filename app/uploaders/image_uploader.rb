@@ -1,6 +1,14 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  process resize_to_limit: [Settings.upload.width, Settings.upload.height]
+  process resize_to_fit: [Settings.upload.width, Settings.upload.height]
+
+  version :thumb do
+    process resize_to_fill: [Settings.upload.thumb, Settings.upload.thumb2]
+  end
+
+  version :show do
+    process resize_to_fill: [Settings.upload.width, Settings.upload.height]
+  end
 
   if Rails.env.production?
     storage :fog

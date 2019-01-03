@@ -28,15 +28,14 @@
 </nav>
 <div id = contentleft>
   <h2 id = "content"> <%= t ".truyenlove" %> </h2>
-  <%= paginate @stories %>
   <div id="list-story">
     <%= render "list_truyen", collection: @stories %>
   </div>
-  <%= paginate @stories %>
+  <%= paginate @stories, theme: "twitter-bootstrap-3" %>
 </div>
 <div id = "sidebar">
   <h2 id = "name"> <%= t ".truyennew" %> </h2>
   <div>
-    <%= render "list_truyen", collection: @stories %>
+    <%= render "new_story", collection: @news %>
   </div>
 </div>

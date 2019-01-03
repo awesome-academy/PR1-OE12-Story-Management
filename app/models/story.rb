@@ -15,6 +15,8 @@ class Story < ApplicationRecord
   scope :order_by, ->(direction){order created_at: direction}
 
   delegate :name, to: :author, prefix: true
+  delegate :show, to: :image, prefix: true
+  delegate :thumb, to: :image, prefix: true
 
   def follow_unfolow member_id
     result = Follow.find_by(story_id: id, member_id: member_id)

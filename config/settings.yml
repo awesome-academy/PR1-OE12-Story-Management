@@ -14,7 +14,7 @@ Member:
 links:
   avatar_email: "http://gravatar.com/emails"
 paginate:
-  per_page: 7
+  per_page: 5
 Author:
   name:
     maximum: 40
@@ -28,8 +28,11 @@ Comment:
 upload:
   width: 456
   height: 300
+  thumb: 250
+  thumb2: 200
 Chapter:
   content:
     minimum: 20
   name:
     maximum: 20
+limit: 5
