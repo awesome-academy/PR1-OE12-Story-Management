@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :author do
-    name {Faker::Name.name}
+  factory :comment do
+    content {"comment 1"}
     member_id { 1 }
   end
 end
