@@ -1,6 +1,11 @@
 FactoryBot.define do
   factory :author do
     name {Faker::Name.name}
-    member_id { 1 }
+
+    after(:build) do |author|
+      member = FactoryBot.create :member
+
+      author.member_id = member.id
+    end
   end
 end

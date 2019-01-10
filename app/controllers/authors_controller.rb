@@ -32,6 +32,7 @@ class AuthorsController < ApplicationController
       flash[:success] = t ".author_update"
       redirect_to authors_path
     else
+      flash[:danger] = t ".author_update_fail"
       render :edit
     end
   end

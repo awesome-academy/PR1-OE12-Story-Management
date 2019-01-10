@@ -3,7 +3,6 @@ FactoryBot.define do
     name {Faker::Name.name}
     sequence(:email){Faker::Internet.email}
     password {"anhlam"}
-    password_confirmation {"anhlam"}
 
     trait :invalid_email do
       email {Faker::Name.name}

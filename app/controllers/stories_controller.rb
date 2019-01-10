@@ -33,6 +33,7 @@ class StoriesController < ApplicationController
       flash[:success] = t ".story_update"
       redirect_to @story
     else
+      flash[:danger] = t ".story_update_fail"
       render :edit
     end
   end
